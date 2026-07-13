@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Urban Grill</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="rest.css" />
 </head>
 <body>
 
@@ -14,10 +14,172 @@
 
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#menu">Menu </a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#about">About </a></li>
+    <li><a href="#menu">Menu</a></li>
     <li><a href="#reservations">Reservations</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
+  <div class="nav-actions">
+    <button class="cart-btn" aria-label="Cart">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="cart-dot"></span>
+    </button>
+    
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    
+    <h1 class="hero-title">
+    The Urban Grill
+    </h1>
+
+    <p class="hero-subtitle">
+      Discover the perfect blend of flavor and style at The Urban Grill. Create the dining experience you've always dreamed of.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-primary">View Menu</button>
+      <button class="btn-secondary">Book a Table</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="menu">
+  <h2 class="menu-title">OUR MENU</h2>
   
+  <div class="menu-track-wrapper">
+    <div class="menu-track">
+      
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRHa2636aSo56NjopN3ImsCvrSrbYxKkL6GQGw1y1Tg&s=10" alt="sides" />
+        <span class="menu-label">sides</span>
+      </div>
+
+      <div class="menu-card ">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu9be2Fursw2MwxRqqe6XgHjsZ9MTsXKeaouoBP7ziZQ&s=10" alt="main course" />
+        <span class="menu-label">Main Course</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdPCprFcO8f4s4gZP5REueQMQjgDW5kzV0lz2cXRbgg&s=10" alt="Salads" />
+        <span class="menu-label">Salads</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm2Bsqg3UuEwuvlsKRuhLx_-92RPnhiAhWYQ682eyxnw&s=10" alt="Sea Foods" />
+        <span class="menu-label">Sea Foods</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ44XNcusi1hQAeBb9zKalCCusb0Ua-xdLQ50An7Ln5SQ&s=10" alt="Soups" />
+        <span class="menu-label">Soups</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePjzgmde9yP2qXyAE_ylORQ9c1QvAB_S4XKX0vGesJA&s=10" alt="pasta & noodles" />
+        <span class="menu-label">Pasta & Noodles</span>
+      </div>
+      
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Ni76eZvANDoLxhkWCEv-MyOHcFbwkr9ogfimonKbYQ&s=10" alt="desserts" />
+        <span class="menu-label">Desserts</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLUAdXHCZdcGw_Gv51AVslOQQJJ0gxpr_W5-bFjZWUA&s=10" alt="drinks" />
+        <span class="menu-label">Drinks</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Ti_9ZzUdc5FGCewr-rUNREjwYKTI6mX9KuhDB_3UDA&s=10" alt="kids" />
+        <span class="menu-label">Kids Menu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-header">
+    <h2 class="title2">GET TO KNOW US</h2>
+  </div>
+
+  <div class="about-row">
+    <!-- LEFT: Sofa Image -->
+    <div class="about-image-wrap">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZRSlz0WCTu0Tf0cuU5_W8FoIW1wxgkknEeP961DgCRw&s=10"
+        alt="L-Shape Sofa"
+        class="about-image"
+      />
+    </div>
+
+    
+    <div class="about-details">
+
+      <div class="star-row">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star half">★</span>
+        <span class="rating-text">(4.8 ratings)</span>
+      </div>
+
+      <h1 class="about-title">Where comfort meets luxury</h1>
+
+      <p class="about-desc">
+       Our pieces bring elegance and functionality to every space . Upgrade your living space with our best-selling L-shape sofa
+        designed for both comfort and style. The premium fabric resists stains
+        while the solid wood frame ensures durability for decades.
+      </p>
+
+      <div class="price-row">
+        <span class="price">KSh 75,000</span>
+        <div class="price-tags">
+          <span class="tag delivery">Free Delivery</span>
+          <span class="tag stock">In Stock</span>
+        </div>
+      </div>
+
+      <button class="order-btn">Order Now &rarr;</button>
+
+    </div>
+  </div>
+</section>
+
+  
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-number">12</span>
+      <span class="stat-label">YEARS OF<br>CRAFTSMANSHIP</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">97%</span>
+      <span class="stat-label">CUSTOMER<br>SATISFACTION</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">8K</span>
+      <span class="stat-label">ORDERS<br>DELIVERED</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">19K</span>
+      <span class="stat-label">HAPPY<br>HOMES</span>
+    </div>
+  </div>
+
+
+
