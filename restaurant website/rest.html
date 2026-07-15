@@ -20,17 +20,65 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <div class="nav-actions">
-    <button class="cart-btn" aria-label="Cart">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <path d="M16 10a4 4 0 01-8 0"/>
-      </svg>
-      <span class="cart-dot"></span>
-    </button>
-    
+  <!-- Cart Icon Button (put this in your navbar) -->
+<button id="cart-icon-btn">
+  🛒 <span id="cart-count">0</span>
+</button>
+
+<!-- Overlay (dims background when cart is open) -->
+<div id="cart-overlay"></div>
+
+<!-- Cart Drawer -->
+<div id="cart-drawer">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="cart-close-btn">&times;</button>
   </div>
+
+  <div id="cart-items-container">
+    <!-- Cart items get inserted here by JavaScript -->
+  </div>
+
+  <div class="cart-summary">
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">$0.00</span>
+    </div>
+    <hr>
+    <div class="summary-row total-row">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+  </div>
+
+  <button id="checkout-btn">Proceed to Checkout</button>
+</div>
+
+<!-- Checkout Modal Overlay -->
+<div id="checkout-overlay"></div>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal">
+  <h2>Checkout</h2>
+
+  <form id="checkout-form">
+    <input type="text" id="full-name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="delivery-address" placeholder="Delivery Address" required>
+    <input type="text" id="card-number" placeholder="Card Number" required>
+
+    <div class="total-amount-box">
+      <span>Total Amount:</span>
+      <span id="checkout-total">$0.00</span>
+    </div>
+
+    <div class="checkout-buttons">
+      <button type="button" id="cancel-checkout-btn">Cancel</button>
+      <button type="submit" id="place-order-btn">Place Order</button>
+    </div>
+  </form>
+</div>
 </nav>
 
 <section id="home" class="hero">
