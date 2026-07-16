@@ -14,8 +14,8 @@
 
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#about">About </a></li>
     <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#reservations">Reservations</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -24,6 +24,7 @@
 <button id="cart-icon-btn">
   🛒 <span id="cart-count">0</span>
 </button>
+</nav>
 
 <!-- Overlay (dims background when cart is open) -->
 <div id="cart-overlay"></div>
@@ -79,7 +80,6 @@
     </div>
   </form>
 </div>
-</nav>
 
 <section id="home" class="hero">
   <div class="hero-bg"></div>
@@ -108,48 +108,48 @@
   
   <div class="menu-track-wrapper">
     <div class="menu-track">
-      
-      <div class="menu-card">
+
+      <div class="menu-card" data-category="sides">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRHa2636aSo56NjopN3ImsCvrSrbYxKkL6GQGw1y1Tg&s=10" alt="sides" />
-        <span class="menu-label">sides</span>
+        <span class="menu-label">Sides</span>
       </div>
 
-      <div class="menu-card ">
+      <div class="menu-card" data-category="main-course">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu9be2Fursw2MwxRqqe6XgHjsZ9MTsXKeaouoBP7ziZQ&s=10" alt="main course" />
         <span class="menu-label">Main Course</span>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="salads">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdPCprFcO8f4s4gZP5REueQMQjgDW5kzV0lz2cXRbgg&s=10" alt="Salads" />
         <span class="menu-label">Salads</span>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="sea foods">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm2Bsqg3UuEwuvlsKRuhLx_-92RPnhiAhWYQ682eyxnw&s=10" alt="Sea Foods" />
         <span class="menu-label">Sea Foods</span>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="soups">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ44XNcusi1hQAeBb9zKalCCusb0Ua-xdLQ50An7Ln5SQ&s=10" alt="Soups" />
         <span class="menu-label">Soups</span>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="pasta-noodles">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePjzgmde9yP2qXyAE_ylORQ9c1QvAB_S4XKX0vGesJA&s=10" alt="pasta & noodles" />
         <span class="menu-label">Pasta & Noodles</span>
       </div>
       
-      <div class="menu-card">
+      <div class="menu-card" data-category="desserts">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Ni76eZvANDoLxhkWCEv-MyOHcFbwkr9ogfimonKbYQ&s=10" alt="desserts" />
         <span class="menu-label">Desserts</span>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="drinks">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLUAdXHCZdcGw_Gv51AVslOQQJJ0gxpr_W5-bFjZWUA&s=10" alt="drinks" />
         <span class="menu-label">Drinks</span>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="kids">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Ti_9ZzUdc5FGCewr-rUNREjwYKTI6mX9KuhDB_3UDA&s=10" alt="kids" />
         <span class="menu-label">Kids Menu</span>
       </div>
@@ -157,17 +157,24 @@
   </div>
 </section>
 
+<section class="dishes-section">
+  <h3 id="dishes-heading">Sides</h3>
+  <div id="dishes-container" class="dishes-grid">
+    <!-- Dish cards get inserted here by JavaScript -->
+  </div>
+</section>
+
 <section id="about" class="about">
   <div class="about-header">
-    <h2 class="title2">GET TO KNOW US</h2>
+    <h2 class="about-title">GET TO KNOW US</h2>
   </div>
 
   <div class="about-row">
-    <!-- LEFT: Sofa Image -->
+    <!-- LEFT: Restaurant Image -->
     <div class="about-image-wrap">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZRSlz0WCTu0Tf0cuU5_W8FoIW1wxgkknEeP961DgCRw&s=10"
-        alt="L-Shape Sofa"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc4ZwTXpmpaRSHhDMlBzjSMmlROG9fnA148QOIaHJx-Q&s=10"
+        alt="Restaurant"
         class="about-image"
       />
     </div>
@@ -175,34 +182,15 @@
     
     <div class="about-details">
 
-      <div class="star-row">
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star half">★</span>
-        <span class="rating-text">(4.8 ratings)</span>
-      </div>
-
-      <h1 class="about-title">Where comfort meets luxury</h1>
-
+    <h1 class="about-sub-title">Rooted In Craft</h1>
+ 
       <p class="about-desc">
-       Our pieces bring elegance and functionality to every space . Upgrade your living space with our best-selling L-shape sofa
-        designed for both comfort and style. The premium fabric resists stains
-        while the solid wood frame ensures durability for decades.
+       Our modern fusion restaurant isn't just about mixing for the sake of it,it's about listening to an ingredient and asking what it wants to become. That's the philosophy behind everything we cook.
+      We work closely with local growers and specialty importers to bring in produce, spices, and proteins at their peak, then let classic technique and global influence shape them into something new.
+      Every plate that leaves our kitchen is built with intention: sourced with care, prepared with precision, and served with the belief that food should surprise you without losing its soul.
       </p>
 
-      <div class="price-row">
-        <span class="price">KSh 75,000</span>
-        <div class="price-tags">
-          <span class="tag delivery">Free Delivery</span>
-          <span class="tag stock">In Stock</span>
-        </div>
       </div>
-
-      <button class="order-btn">Order Now &rarr;</button>
-
-    </div>
   </div>
 </section>
 
@@ -210,24 +198,187 @@
   <div class="stats-bar">
     <div class="stat-item">
       <span class="stat-number">12</span>
-      <span class="stat-label">YEARS OF<br>CRAFTSMANSHIP</span>
+      <span class="stat-label">YEARS OF<br>PERFECTING THE CRAFT</span>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
-      <span class="stat-number">97%</span>
-      <span class="stat-label">CUSTOMER<br>SATISFACTION</span>
+      <span class="stat-number">90%</span>
+      <span class="stat-label">INGREDIENTS<br>SOURCED LOCALLY</span>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
-      <span class="stat-number">8K</span>
-      <span class="stat-label">ORDERS<br>DELIVERED</span>
+      <span class="stat-number">#1 </span>
+      <span class="stat-label">IN TOWN<br>FOR FUSION DINING</span>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
-      <span class="stat-number">19K</span>
-      <span class="stat-label">HAPPY<br>HOMES</span>
+      <span class="stat-number">50,000+</span>
+      <span class="stat-label">GUESTS<br>SERVED</span>
     </div>
   </div>
 
+  <section class="reservation-section">
+    <div class="reservation-container">
+
+      <!-- Left side: info -->
+      <div class="info-panel">
+        <h1>Reserve Your Table</h1>
+        <p class="subtitle">
+          Experience an unforgettable dining experience at Bites. Book your
+          table now and enjoy our premium cuisine with exceptional service.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h3>Easy Booking</h3>
+              <p>Reserve your table in just a few clicks</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 7 12 12 15 14"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h3>Flexible Timing</h3>
+              <p>Choose your preferred date and time</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h3>Group Friendly</h3>
+              <p>Perfect for any group size or occasion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: form -->
+      <div class="form-panel">
+        <form id="reservationForm" novalidate>
+
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+            </div>
+            <span class="error-message" id="fullNameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4z" style="display:none"/>
+                <path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <input type="email" id="email" name="email" placeholder="john@example.com">
+            </div>
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+            <span class="error-message" id="phoneError"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date</label>
+              <div class="input-wrapper">
+                <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <input type="date" id="date" name="date">
+              </div>
+              <span class="error-message" id="dateError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Time</label>
+              <div class="input-wrapper">
+                <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="9"/>
+                  <polyline points="12 7 12 12 15 14"/>
+                </svg>
+                <input type="time" id="time" name="time">
+              </div>
+              <span class="error-message" id="timeError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <select id="guests" name="guests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7+">7+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="requests">Special Requests (Optional)</label>
+            <textarea id="requests" name="requests" rows="3" placeholder="Any special requests or dietary requirements?"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Reserve Table</button>
+
+          <p class="form-success" id="formSuccess">Your table has been reserved! We'll send a confirmation shortly.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="rest.js"></script>
+</body>
+</html>
 
 
