@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Velvet Crumb</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="bakery.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">THE VELVET CRUMB</div>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Cart Icon Button (put this in your navbar) -->
+<button id="cart-icon-btn">
+  🛒 <span id="cart-count">0</span>
+</button>
+</nav>
+
+<!-- Overlay (dims background when cart is open) -->
+<div id="cart-overlay"></div>
+
+<!-- Cart Drawer -->
+<div id="cart-drawer">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="cart-close-btn">&times;</button>
+  </div>
+
+  <div id="cart-items-container">
+    <!-- Cart items get inserted here by JavaScript -->
+  </div>
+
+  <div class="cart-summary">
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">$0.00</span>
+    </div>
+    <hr>
+    <div class="summary-row total-row">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+  </div>
+
+  <button id="checkout-btn">Proceed to Checkout</button>
+</div>
+
+<!-- Checkout Modal Overlay -->
+<div id="checkout-overlay"></div>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal">
+  <h2>Checkout</h2>
+
+  <form id="checkout-form">
+    <input type="text" id="full-name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="delivery-address" placeholder="Delivery Address" required>
+    <input type="text" id="card-number" placeholder="Card Number" required>
+
+    <div class="total-amount-box">
+      <span>Total Amount:</span>
+      <span id="checkout-total">$0.00</span>
+    </div>
+
+    <div class="checkout-buttons">
+      <button type="button" id="cancel-checkout-btn">Cancel</button>
+      <button type="submit" id="place-order-btn">Place Order</button>
+    </div>
+  </form>
+</div>
+
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    
+    <h1 class="hero-title">
+   OVEN FRESH AND MADE WITH LOVE!
+    </h1>
+
+    <p class="hero-subtitle">
+      
+    </p>
+
+    <div class="hero-actions">
+      <a href="#order" class="btn-primary">order</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="about">
+  <div class="about-header">
+    <h2 class="about-title">GET TO KNOW US</h2>
+  </div>
+<p class="about-desc">
+       
+ From freshly baked cakes to warm, creamy donuts, we believe the best moments are often shared over something delicious. Every recipe is carefully crafted using quality ingredients, a little creativity, and plenty of heart.
+ Whether you're celebrating a special moment, treating yourself, or simply craving something sweet, there's always something fresh waiting for you at Velvet Crumbs. Come in, take a bite, and make yourself at home.
+</p>
+
+
+<section id="favourites" class="favourites">
+    <h2 class="favourites-title">PEOPLE'S FAVOURITES</h2>
+     
+    <div class="cards-grid">
+
+    
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRyRD7xeaq-Vzd94oM429i3ebGlFiP76qex-gpT_4GZw&s=10" alt="Vanilla Buttercream" />
+     </div>
+      <div class="card-body">
+        <div class="card-title-row">
+          <p class="card-title">Vanilla Buttercream</p>
+          
+        </div>
+        <div class="card-price-row">
+          <span class="price">1400/=</span>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnat10K-_RH9mdOTTOvY0wQgSfff9V0IuYn9HamsGV4A&s=10" alt="Carrot Cinnamon Cake" />
+      </div>
+      <div class="card-body">
+        <div class="card-title-row">
+          <p class="card-title">Carrot Cinnamon Cake</p>
+          
+        </div>
+        <div class="card-price-row">
+          <span class="price">1300/=</span>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXF3i-YEDGgdAyAnfhaAeXikv5NHrhxQekT3C0dPB4A&s=10" alt="Chocolate fudge cake" />
+      </div>
+      <div class="card-body">
+        <div class="card-title-row">
+          <p class="card-title">Chocolate Fudge Cake</p>
+          
+        </div>
+        <div class="card-price-row">
+          <span class="price">1500/=</span>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgNM6ZtXcnoy5oqocLU1QegtwrX7cxXBlBnIIzXXWfw&s=10" alt="Red Velvet " />
+      </div>
+      <div class="card-body">
+        <div class="card-title-row">
+          <p class="card-title">Red Velvet Cake</p>
+          
+        </div>
+        <div class="card-price-row">
+          <span class="price">1200/=</span>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
