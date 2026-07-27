@@ -9,8 +9,7 @@ html{
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #c29ebd;
-  min-height: 100vh;
+   min-height: 100vh;
 }
 
 nav {
@@ -347,6 +346,7 @@ nav {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .hero-bg {
@@ -363,10 +363,10 @@ nav {
 }
 
 .hero-content {
-  position:flex-end;
+  position:relative;
   z-index: 2;
   padding: 60px 80px;
-  max-width: 1800px;
+  max-width: 1200px;
 }
 
 .hero-title {
@@ -390,7 +390,7 @@ nav {
 
 .btn-primary {
   display: flex;
-  align-items: center;
+  align-items: flex-baseline;
   gap: 8px;
   background: #a01667;
   color: #fff;
@@ -411,3 +411,142 @@ nav {
   transform: translateY(-1px);
 }
 
+.about {
+  padding: 60px 40px;
+  margin: 0 auto;
+  text-align: center;
+  background: #f7dae7;
+}
+
+.about-title{
+  font-family: 'Surveyor, Fine Bold Regular', serif;
+  font-size: 54px;
+  font-weight: 600;
+  color: #141413;
+  margin-bottom: 24px;
+}
+
+.about-desc{
+    font-family: "Monsieur La Doulaise", serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 400;
+    color: #141413;
+    line-height: 1.6;
+    margin: 0 auto 80px;
+    max-width: 820px;
+}
+
+
+.favourites {
+  background-color: #d38c9d;
+  padding: 60px 0 80px;
+  overflow: hidden;
+}
+
+.favourites-title{
+    font-family: 'Surveyor, Fine Bold Regular', serif;
+    font-size: 54px;
+    font-weight: 600;
+    color: #141413;
+    margin-bottom: 40px;
+}
+
+.card-track-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  padding: 20px 60px 40px;
+  scrollbar-width: none;
+}
+
+.card-track-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card-track-wrapper:active {
+  cursor: grabbing;
+}
+
+.card-track {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+  width: max-content;
+}
+
+.card-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.card-label {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ece8e0;
+  overflow: hidden;
+  padding: 0.75rem 0.75rem 1rem;
+}
+
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+ 
+} 
+
+.card-body {
+  padding: 0 0.25rem;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #161615;
+}
